@@ -23,7 +23,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var NewComponent = function (_React$Component) {
   _inherits(NewComponent, _React$Component);
-
+  console.log(_react2.default.Component)
   function NewComponent(props) {
     _classCallCheck(this, NewComponent);
 
