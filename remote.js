@@ -39,7 +39,11 @@
     }, {
       key: "render",
       value: function render() {
-        return React.createElement("View", { style :{ "backgroundColor":"red"}},[ ]);
+        return React.createElement(View, { key:1 },
+                                [
+                                    React.createElement(Text,{ key:2 },["ID"])
+                                ]
+                            )
       }
     }]);
 
