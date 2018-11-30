@@ -72,5 +72,6 @@
     return Test;
   })(React.Component);
 
-return Test			
-);
+//return Test			
+  return Test;
+})
