@@ -1,22 +1,4 @@
-
-//React.createElement(TextInput,{ style: { "backgroundColor":"red"} },[]);
-
-
 (function main(React, require) {
-	
-//		var ReactNative = require('react-native');
-//	var {
-//	  AppRegistry,
-	  //StyleSheet,
-	  //Text,
-	  //View,
-	  //TouchableHighlight
-	//} = ReactNative;
-	
-//	React.createElement(Text,{ style: { "backgroundColor":"red"} },["Hello Jaimin"]);
-//})
-
-
 
   var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -29,7 +11,7 @@
   var _React = React;
   var View = _React.View;
   var Text = _React.Text;
-  var LayoutAnimation = _React.LayoutAnimation;
+  //var LayoutAnimation = _React.LayoutAnimation;
 
   var Test = (function (_React$Component) {
     _inherits(Test, _React$Component);
@@ -57,18 +39,13 @@
     }, {
       key: "render",
       value: function render() {
-         return 
-          React.createElement(
-            Text,
-		{},
-            ["Hello from "]
-          )	
+        return React.createElement(Text, null,["Hello from "]);
       }
     }]);
 
     return Test;
   })(React.Component);
 
-//return Test			
   return Test;
-});
+})
+			
