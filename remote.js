@@ -59,13 +59,15 @@
     }, {
       key: "render",
       value: function render() {
-        return ( 
+         return React.createElement(
+          View,
+          { style: { left: this.state.t * 100 } },
           React.createElement(
             Text,
             null,
             ["Hello from "]
-          );
-	)	
+          )
+        );	
       }
     }]);
 
