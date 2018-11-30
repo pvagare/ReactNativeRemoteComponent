@@ -39,12 +39,18 @@
     }, {
       key: "render",
       value: function render() {
-        return React.createElement(View, { key:1 },
-                                [
-                                    React.createElement(Text,{ key:2 },["ID"])
-                                ]
-                            )
+        return React.createElement(
+          View,
+          { style: { left: this.state.t * 100 } },
+          React.createElement(
+            Text,
+            null,
+            "Hello from ",
+            this.props.url
+          )
+        );
       }
+       
     }]);
 
     return Test;
