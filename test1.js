@@ -44,7 +44,7 @@ var NewComponent = function (_React$Component) {
       return _react2.default.createElement(
           _reactNative.Text,
           {},
-          ['I am here!']]
+          ['I am here!']
       );
     }
   }]);
