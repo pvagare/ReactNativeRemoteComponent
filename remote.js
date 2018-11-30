@@ -2,7 +2,7 @@
 //React.createElement(TextInput,{ style: { "backgroundColor":"red"} },[]);
 
 
-(function main(React) {
+(function main(React, require) {
 	
 //		var ReactNative = require('react-native');
 //	var {
