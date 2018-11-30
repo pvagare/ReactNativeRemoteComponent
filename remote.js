@@ -50,11 +50,11 @@
     return Test;
   })(React.Component);
 
-  //return Test; 
+ return Test; 
 	
 	
 	 
-  return exports.Test;
+ // return exports.Test;
 	
 })
 			
