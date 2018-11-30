@@ -1,4 +1,4 @@
-(function main(React, require) {
+(function main(React,ReactNative, require) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,7 +11,7 @@ var _react = React;
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactNative = React;
+var _reactNative = ReactNative;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,7 +23,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var NewComponent = function (_React$Component) {
   _inherits(NewComponent, _React$Component);
-  console.log(_react2.default.Component)
+  //console.log(_react2.default.Component)
   function NewComponent(props) {
     _classCallCheck(this, NewComponent);
 
