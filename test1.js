@@ -36,7 +36,7 @@ var NewComponent = function (_React$Component) {
   _createClass(NewComponent, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      console.log('New component mounted');
+      console.warn('New component mounted');
     }
   }, {
     key: 'render',
