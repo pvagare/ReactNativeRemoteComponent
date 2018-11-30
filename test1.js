@@ -42,13 +42,9 @@ var NewComponent = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        _reactNative.View,
-        null,
-        _react2.default.createElement(
           _reactNative.Text,
-          null,
+          {},
           ['I am here!']]
-        )
       );
     }
   }]);
