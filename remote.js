@@ -39,7 +39,7 @@
     }, {
       key: "render",
       value: function render() {
-        return React.createElement(Text, {},["Hello from "]);
+        return React.createElement(View, { style :{ "backgroundColor":"red"}},[ ]);
       }
     }]);
 
