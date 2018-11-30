@@ -59,12 +59,13 @@
     }, {
       key: "render",
       value: function render() {
-        return 
+        return ( 
           React.createElement(
             Text,
             null,
             ["Hello from "]
           );
+	)	
       }
     }]);
 
