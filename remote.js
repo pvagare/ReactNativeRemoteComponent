@@ -2,7 +2,7 @@
 //React.createElement(TextInput,{ style: { "backgroundColor":"red"} },[]);
 
 
-//(function main(React,Text require) {
+(function main(React) {
 	
 //		var ReactNative = require('react-native');
 //	var {
@@ -72,4 +72,5 @@
     return Test;
   })(React.Component);
 
-///return Test			
+return Test			
+);
