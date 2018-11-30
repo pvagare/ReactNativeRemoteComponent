@@ -50,7 +50,7 @@ var NewComponent = function (_React$Component) {
   }]);
 
   return NewComponent;
-}(_react2.default.Component);
+}(_react2.Component);
 
   return NewComponent
 })
