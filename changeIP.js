@@ -101,8 +101,8 @@ var NewComponent = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _this = this;
-       var i = 1;
-        var isAndroid = Platform.OS == "android" ? true : false
+      var i = 1;
+      var isAndroid = Platform.OS == "android" ? true : false
         return (
 
             _react2.default.createElement(_reactNative.View, {  style: styles.container},
@@ -124,7 +124,7 @@ var NewComponent = function (_React$Component) {
                                 _react2.default.createElement(CustomDivider,{key:++i})
                             ])
                     ]),
-                    _react2.default.createElement(_reactNative.Scroll.View, {key:++i, style: styles.scrollView },
+                    _react2.default.createElement(Scroll_reactNative.View, {key:++i, style: styles.scroll_reactNative.View },
                     [
                           // inside the Scroll_reactNative.View 
                           _react2.default.createElement(_reactNative.View,{key:++i,style : {height:500}},[
@@ -227,6 +227,7 @@ var NewComponent = function (_React$Component) {
                     _react2.default.createElement(Footer,{key:++i})
                 ]
             )
+        )
     }
   }]);
 
@@ -235,3 +236,4 @@ var NewComponent = function (_React$Component) {
 
   return NewComponent
 })
+
