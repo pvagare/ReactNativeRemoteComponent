@@ -201,7 +201,7 @@ var NewComponent = function (_React$Component) {
                                             // 
                                             _react2.default.createElement(_reactNative.View,{ key:++i},[
                                                 _react2.default.createElement(Button,{key:++i,style : {fontSize:responsiveFontSize(2),fontWeight :"normal",padding: responsiveHeight(0.5), color: "white", borderWidth: responsiveHeight(0.1), borderColor: "#015EBF", backgroundColor: "#0061b8" },
-                                                onPress: function() { alert(_this.state.confirmUserId)}
+                                                onPress: function() { alert(_this.state.confirmUserId)}}
                                                 },[
                                                     "Save Changes",
                                                     
@@ -212,7 +212,7 @@ var NewComponent = function (_React$Component) {
                                             // 
                                             _react2.default.createElement(_reactNative.View,{ key:++i},[
                                                 _react2.default.createElement(Button,{key:++i,style : {fontSize:responsiveFontSize(2),  fontWeight :"normal", padding: responsiveHeight(0.5), borderWidth: responsiveHeight(0.1), borderColor: "#0061b8", backgroundColor: "white" },
-                                                onPress:function() {alert("Cancel")}
+                                                onPress:function() {alert("Cancel")}}
                                                 },[
                                                     "Cancel"
                                                 ]) 
