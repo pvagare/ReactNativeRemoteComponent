@@ -101,7 +101,7 @@ var NewComponent = function (_React$Component) {
     key: 'render',
     value: function render() {
       var _this = this;
-      return        let i = 1;
+       var i = 1;
         let isAndroid = Platform.OS == "android" ? true : false
         return (
 
@@ -227,7 +227,6 @@ var NewComponent = function (_React$Component) {
                     _react2.default.createElement(Footer,{key:++i})
                 ]
             )
-        )
     }
   }]);
 
