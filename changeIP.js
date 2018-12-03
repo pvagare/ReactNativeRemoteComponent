@@ -102,7 +102,7 @@ var NewComponent = function (_React$Component) {
     value: function render() {
       var _this = this;
        var i = 1;
-        let isAndroid = Platform.OS == "android" ? true : false
+        var isAndroid = Platform.OS == "android" ? true : false
         return (
 
             _react2.default.createElement(_reactNative.View, {  style: styles.container},
@@ -124,7 +124,7 @@ var NewComponent = function (_React$Component) {
                                 _react2.default.createElement(CustomDivider,{key:++i})
                             ])
                     ]),
-                    _react2.default.createElement(Scroll_reactNative.View, {key:++i, style: styles.scroll_reactNative.View },
+                    _react2.default.createElement(_reactNative.Scroll.View, {key:++i, style: styles.scrollView },
                     [
                           // inside the Scroll_reactNative.View 
                           _react2.default.createElement(_reactNative.View,{key:++i,style : {height:500}},[
@@ -187,7 +187,7 @@ var NewComponent = function (_React$Component) {
                                         _react2.default.createElement(_reactNative.View,{key:++i,style : {marginTop: responsiveHeight(1)}},[
                                             //
                                             _react2.default.createElement(_reactNative.TextInput,{ key:++i,style : {borderWidth: 0.9, padding: 0, backgroundColor: "white", borderColor: "gray"}
-                                            ,onChange_reactNative.Text : function (val) {  _this.setState({ newUserId : val }) }},
+                                            ,onChangeText : function (val) {  _this.setState({ newUserId : val }) }},
                                             [
                                                 this.state.confirmUserId
                                             ]) 
