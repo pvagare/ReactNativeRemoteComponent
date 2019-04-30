@@ -1,89 +1,91 @@
   
- activity.findOne({partyId :"1"},function(err,res){
-       
-      if(res){
-            var array = res.cases;
-            var isFound = false;
-            
-            for (let index = 0; index < array.length; index++) {
-                var element = array[index];
-                for (let indexJ = 0; indexJ < objectData.cases.length; indexJ++) {
-                  var requestObject = objectData.cases[indexJ];
-                  if(requestObject.id == element.id ){
-                    element.serviceRequests = element.serviceRequests.concat(requestObject.serviceRequests);
-                     isFound = true;
-                  }
-              }
+ activity.findOne({ partyId: "1" }, function (err, res) {
+
+    if (res) {
+      var array = res.activities;
+      console.log(JSON.stringify(res))
+
+      for (let indexJ = 0; indexJ < objectData.cases.length; indexJ++) {
+        var requestObject = objectData.cases[indexJ].serviceRequests;
+
+        for (let indexK = 0; indexK < requestObject.length; indexK++) {
+
+          var activityArray = requestObject[indexK].activities;
+
+          for(let indexL=0;indexL<activityArray.length ; indexL++){
+            var element = activityArray[indexL];
+            var newActivityObject = {
+              id : element.id,
+              traceId : '1',
+              clientId : '1'
             }
-
-            var result = difference(res.cases, objectData.cases);
-
-            if(result.length > 0){
-              res.cases = array.concat(result);
-            }
-
-        activity.findOneAndUpdate({partyId:"1"},res,{ new : true},function(err,result){
-            console.log("Updated Final");
-        });
-
-      }else{
-
-        activity.findOneAndUpdate({ partyId : "1" }, objectData, { new : true,upsert : true},function(err,doc,res){
-          if(doc){
-            console.log("inserted into DB")
-          }  
-         });
+            array.push(newActivityObject);
+          } 
+        }
       }
+
+      activity.findOneAndUpdate({ partyId: "1" }, res, { new: true }, function (err, result) {
+        console.log("Updated Final");
+      });
+
+    } else {
+
+      var newObject = {};
+      newObject.partyId = "1";
+      newObject.activities = [];
+
+      for (let indexJ = 0; indexJ < objectData.cases.length; indexJ++) {
+        var requestObject = objectData.cases[indexJ].serviceRequests;
+
+        for (let indexK = 0; indexK < requestObject.length; indexK++) {
+
+          var activityArray = requestObject[indexK].activities;
+
+          for(let indexL=0;indexL<activityArray.length ; indexL++){
+            var element = activityArray[indexL];
+            var newActivityObject = {
+              id : element.id,
+              traceId : '1',
+              clientId : '1'
+            }
+            newObject.activities.push(newActivityObject);
+          } 
+        }
+      }
+
+      activity.findOneAndUpdate({ partyId: "1" }, newObject, { new: true, upsert: true }, function (err, doc, res) {
+        if (doc) {
+          console.log("inserted into DB")
+        }
+      });
+    }
   });
-
-
-function difference(result1,result2){
-var props = ['id'];
-
-var result = result1.filter(function(o1){
-    // filter out (!) items in result2
-    return !result2.some(function(o2){
-        return o1.id === o2.id;          // assumes unique id
-    });
-})
-return result
-
-}
-
-
-
+  
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-
 const ActivitySchema = new Schema({
     partyId: {
-      type: String,
+        type: String,
     },
-    traceId: {
-      type: String,
-    }, id: {
-      type: String
+     id: {
+        type: String
     },
-    cases: [{
-      id: { type: String },
-      serviceRequests: [
+    activities: [
         {
-          id: { type: String },
-          sr_context: { type: String },
-          activities: [
-            {
-              id: {
+            id: {
                 type: String
-              }
+            },
+            traceId: {
+                type: String,
+            },
+            clientId: {
+                type: String,
             }
-          ]
         }
-      ]
-    }]
-  })
-    
- 
+    ]
+})
 
- const Activity  = mongoose.model('Activity', ActivitySchema);
+
+const Activity = mongoose.model('Activity', ActivitySchema);
